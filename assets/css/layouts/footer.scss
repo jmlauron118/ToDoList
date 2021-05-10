@@ -1,0 +1,45 @@
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.footer-container {
+    padding-right: 2rem;
+    padding-left: calc(2rem + 56px);
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 40px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+}
+.d-sm-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.d-none {
+    display: none !important;
+}
+
+.footer-container .footer-detail {
+    cursor: default;
+}
+.text-secondary {
+    color: rgba(0,0,0,.54) !important;
+}
+.text-secondary {
+    color: #868e96 !important;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+small {
+    font-size: 80%;
+}

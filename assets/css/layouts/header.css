@@ -1,0 +1,36 @@
+.head-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 20px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.576);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.576);
+  z-index: 2;
+  background-color: lavenderblush;
+}
+
+.head-container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.head-container .nav a.navlink {
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #05386b;
+  margin: 0px 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.text-condensed {
+  font-family: Roboto Condensed;
+  font-size: 20px;
+}
+/*# sourceMappingURL=header.css.map */
