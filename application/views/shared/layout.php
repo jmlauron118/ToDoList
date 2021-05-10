@@ -25,15 +25,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
 
             #main-content{
-                /* width: 90%;
-                height: 600px;
-                background-color: gray;
-                float: inline-start; */
-                
                 padding: 1rem;
-                padding-top: calc(1rem + 100);
+                padding-top: calc(1rem + 50px);
+                padding-left: calc(1rem + 50px);
                 min-height: 100vh;
                 background-color: #f2f2f2;
+            }
+
+            #sidebar{
+                width: 50px;
+                background-color: #5cdb95;
+                height: 100%;
+                float: left;
+                z-index: 1;
+                position: fixed;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.576);
             }
 
             .clear{
@@ -43,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
     <body>
         <?php if($header) {echo $header;} ?>
+        <?php if($sidebar) {echo $sidebar;} ?>
         <div id="main-content">
             <?php if($page) {echo $page;} ?>
         </div>

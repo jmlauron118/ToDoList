@@ -10,6 +10,7 @@ class MY_Controller extends CI_Controller{
 
     public function layout(){
         $this->partials["header"] = $this->load->view("partials/header", $this->data, TRUE);
+        $this->partials["sidebar"] = $this->load->view("partials/sidebar", $this->data, TRUE);
         $this->partials["footer"] = $this->load->view("partials/footer", $this->data, TRUE);
         $this->partials["page"] = $this->load->view($this->page, $this->data, TRUE);
         $this->load->view("shared/layout", $this->partials);

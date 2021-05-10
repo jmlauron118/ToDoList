@@ -73,21 +73,26 @@ small {
   background-color: lavenderblush;
 }
 
-.head-container .nav {
+.head-container .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.head-container .nav a.navlink {
-  font-weight: bold;
-  font-size: 17px;
-  text-transform: uppercase;
-  text-decoration: none;
+.head-container .title .menu {
   color: #05386b;
-  margin: 0px 20px;
-  display: inline-block;
-  position: relative;
+  font-size: 27px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.head-container .title .menu:hover {
+  color: #0e5eae;
+}
+
+.head-container .title .app-title {
+  font-size: 27px;
+  cursor: pointer;
 }
 
 .text-condensed {
