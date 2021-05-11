@@ -20,7 +20,7 @@
 
 .head-container .title .menu {
   color: #05386b;
-  font-size: 27px;
+  font-size: 1.25rem;
   margin-right: 1rem;
   cursor: pointer;
 }
@@ -30,12 +30,11 @@
 }
 
 .head-container .title .app-title {
-  font-size: 27px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
 .text-condensed {
   font-family: Roboto Condensed;
-  font-size: 20px;
 }
 /*# sourceMappingURL=header.css.map */
