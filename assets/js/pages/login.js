@@ -10,21 +10,67 @@ function Login(){
     this.InitLogin = (() =>{
         $('#btnSignUp').off('click').on('click', function(){
             var userData = {
-                FirstName: $('#txtFirstName').val(),
-                MiddleName: $('#txtMiddleName').val(),
-                LastName: $('#txtLastName').val(),
-                Gender: $('#ddGender').val(),
-                Username: $('#txtUsername').val(),
-                Password: $('#txtPassword').val()
+                firstname: $('#txtFirstName').val(),
+                lastname: $('#txtLastName').val(),
+                gender: $('#ddGender').val(),
+                username: $('#txtUsername').val(),
+                password: $('#txtPassword').val(),
+                role_id: 1,
+                is_active: 1
             };
 
-            _login.Test(userData);
+            if(!IsObjectHasNull(userData)){
+                userData.middlename = $('#txtMiddleName').val();
+
+                _login.SignUp(userData);
+            }
+            else{
+                alert('Please fill all the required fields.');
+            }
+        });
+
+        $('#btnSignIn').off('click').on('click', function(){
+            var userCreds = {
+                username: $('#txtLoginUsername').val(),
+                password: $('#txtLoginPassword').val()
+            }
+
+            if(!IsObjectHasNull(userCreds)){
+                _login.SignIn(userCreds);
+            }
+            else{
+                alert('Please fill all the required fields.');
+            }
         });
     });
 
-    this.Test = ((userData) =>{
+    this.SignUp = ((userData) =>{
         $.post('Signup', { userData: userData }, function(response){
-            alert(response);
+            var responseObj = JSON.parse(response);
+
+            _login.ClearFields();
+            if(responseObj.Status === 1){
+                $('#modalRegister').modal('hide');
+                alert(responseObj.Message);
+            }
+            else{
+                alert(responseObj.Message);
+            }
         });
+    });
+
+    this.SignIn = ((userCreds) =>{
+        $.post('Signin', { userCreds: userCreds }, function(response){
+            console.log(response);
+        });
+    });
+
+    this.ClearFields = (() =>{
+        $('#txtFirstName').val('')
+        $('#txtMiddleName').val('')
+        $('#txtLastName').val('')
+        $('#ddGender').val('')
+        $('#txtUsername').val('')
+        $('#txtPassword').val('')
     });
 }

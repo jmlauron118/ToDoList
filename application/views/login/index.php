@@ -19,16 +19,16 @@
             <hr>
             <div class="user-inputs">
                 <div class="form-outline in-content">
-                    <input type="text" name="txtUsername" class="form-control" />
-                    <label class="form-label" for="form1">Username</label>
+                    <input type="text" id="txtLoginUsername" class="form-control" />
+                    <label class="form-label" for="txtLoginUsername">Username</label>
                 </div>
                 <div class="form-outline in-content">
-                    <input type="password" name="txtPassword" class="form-control" />
-                    <label class="form-label" for="form1">Password</label>
+                    <input type="password" id="txtLoginPassword" class="form-control" />
+                    <label class="form-label" for="txtLoginPassword">Password</label>
                 </div>
                 <div class="in-login">
                     <div class="create-acc"><a data-mdb-toggle="modal" data-mdb-target="#modalRegister">Create account</a></div>
-                    <div><button name="btnSignIn" type="button" class="btn btn-prim ripple-surface">Sign In</button></div>
+                    <div><button id="btnSignIn" type="button" class="btn btn-prim ripple-surface">Sign In</button></div>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                                 <div class="col">
                                     <div class="form-outline">
                                         <input type="text" id="txtFirstName" class="form-control">
-                                        <label class="form-label" for="txtFirstName" style="margin-left: 0px;">First name</label>
+                                        <label class="form-label" for="txtFirstName" style="margin-left: 0px;">*First name</label>
                                     <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
                                 </div>
                                 <div class="col">
@@ -60,12 +60,12 @@
                                 <div class="col">
                                     <div class="form-outline">
                                         <input type="text" id="txtLastName" class="form-control">
-                                        <label class="form-label" for="txtLastName" style="margin-left: 0px;">Last name</label>
+                                        <label class="form-label" for="txtLastName" style="margin-left: 0px;">*Last name</label>
                                     <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
                                 </div>
                                 <div class="col">
                                     <select id="ddGender" class="btn" >
-                                        <option class="dropdown-item" value="" disabled selected>Gender</option>
+                                        <option class="dropdown-item" value="" disabled selected>*Gender</option>
                                         <option class="dropdown-item" value="Male">Male</option>
                                         <option class="dropdown-item" value="Female">Female</option>
                                         <option class="dropdown-item" value="Others">Others</option>
@@ -76,18 +76,18 @@
                                 <div class="col">
                                     <div class="form-outline">
                                         <input type="text" id="txtUsername" class="form-control">
-                                        <label class="form-label" for="txtUsername" style="margin-left: 0px;">User name</label>
+                                        <label class="form-label" for="txtUsername" style="margin-left: 0px;">*User name</label>
                                     <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
                                         <input type="password" id="txtPassword" class="form-control">
-                                        <label class="form-label" for="txtPassword" style="margin-left: 0px;">Password</label>
+                                        <label class="form-label" for="txtPassword" style="margin-left: 0px;">*Password</label>
                                     <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
                                 </div>
                             </div>
                             <hr>
-                            <div>
+                            <div class="btn-control">
                                 <button class="btn btn-light ripple-surface" data-mdb-dismiss="modal">Close</button>
                                 <button type="button" id="btnSignUp" class="btn btn-primary ripple-surface">Sign up</button>
                             </div>
@@ -102,4 +102,5 @@
     <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/popper/popper.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/mdbootstrap/js/mdb.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/pages/login.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/general.js"></script>
 </html>

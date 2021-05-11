@@ -2121,4 +2121,9 @@ body, html {
 .login-content .user-inputs .in-login .create-acc a:hover {
   color: #2270bd;
 }
+
+.btn-control {
+  position: relative;
+  float: right;
+}
 /*# sourceMappingURL=main.css.map */

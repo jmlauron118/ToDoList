@@ -7,18 +7,7 @@ class Home extends MY_Controller{
     }
 
     public function index(){
-        $this->checkSession();
-    }
-
-    public function checkSession(){
-        $user_id = $this->session->userdata("user_id");
-
-        if(isset($user_id)){
-            $this->page = "home/home";
-            $this->layout();
-        }
-        else{
-            redirect(base_url()."login");
-        }
+        $this->page = "home/home";
+        $this->layout();
     }
 }

@@ -6,6 +6,7 @@ class Login extends MY_Controller{
         parent::__construct();
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->model('UserModel');
     }
 
     public function index(){
@@ -25,8 +26,13 @@ class Login extends MY_Controller{
     }
 
     public function signUp(){
-        $test = $_POST["userData"];
+        $data = $_POST["userData"];
+        echo $this->UserModel->AddUser($data);
+    }
 
-        echo $test["FirstName"];
+    public function signIn(){
+        $data = $_POST["userCreds"];
+
+        echo $this->UserModel->GetUserByCreds($data["username"], $data["password"]);
     }
 }
