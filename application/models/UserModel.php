@@ -19,7 +19,26 @@
         function GetUserByCreds($username, $password){
             $this->db->where('username', $username);
             $this->db->where('password', $password);
-            $response = $this->db->get('users');
+            $this->db->where('is_active', 1);
+
+            $result = $this->db->get('users');
+
+            if($result->num_rows() > 0){
+                foreach($result->result() as $row):
+                    $userData["user_id"] = $row->id;
+                    $userData["username"] = $row->username;
+                endforeach;
+
+                $this->session->set_userdata($userData);
+
+                $response["Status"] = 1;
+                $response["Message"] = 'Successfully login.';
+                $response["Data"] = $result->row();
+            }
+            else{
+                $response["Status"] = 0;
+                $response["Message"] = 'Invalid username/password! Please try again.';
+            }
 
             return json_encode($response);
         }

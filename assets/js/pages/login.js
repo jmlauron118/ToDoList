@@ -48,13 +48,14 @@ function Login(){
         $.post('Signup', { userData: userData }, function(response){
             var responseObj = JSON.parse(response);
 
-            _login.ClearFields();
+            _login.ClearFields(1);
+
             if(responseObj.Status === 1){
                 $('#modalRegister').modal('hide');
-                alert(responseObj.Message);
+                Notify(responseObj.Message, 'success');
             }
             else{
-                alert(responseObj.Message);
+                Notify(responseObj.Message, 'warning');
             }
         });
     });
@@ -62,15 +63,30 @@ function Login(){
     this.SignIn = ((userCreds) =>{
         $.post('Signin', { userCreds: userCreds }, function(response){
             console.log(response);
+            // var responseObj = JSON.parse(response);
+
+            // if(responseObj.Status === 1){
+            //     _login.ClearFields();
+            //     Notify(responseObj.Message, 'success');
+            // }
+            // else{
+            //     Notify(responseObj.Message, 'warning');
+            // }
         });
     });
 
-    this.ClearFields = (() =>{
-        $('#txtFirstName').val('')
-        $('#txtMiddleName').val('')
-        $('#txtLastName').val('')
-        $('#ddGender').val('')
-        $('#txtUsername').val('')
-        $('#txtPassword').val('')
+    this.ClearFields = ((ind) =>{
+        if(ind){
+            $('#txtFirstName').val('');
+            $('#txtMiddleName').val('');
+            $('#txtLastName').val('');
+            $('#ddGender').val('');
+            $('#txtUsername').val('');
+            $('#txtPassword').val('');
+        }
+        else{
+            $('#txtLoginUsername').val('');
+            $('#txtLoginPassword').val('');
+        }
     });
 }

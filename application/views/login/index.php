@@ -4,8 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="<?php echo base_url(); ?>assets/images/icon.png">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/main.css"/>
-        <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css"/>  -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/mdbootstrap/css/mdb.min.css"/> 
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/snackbar-notif/css/snackbar.min.css"/> 
     </head>
     <body class="login">
         <div class="login-bg"></div>
@@ -99,8 +99,8 @@
     </body>
     <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/popper/popper.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/mdbootstrap/js/mdb.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/snackbar-notif/js/snackbar.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/pages/login.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/general.js"></script>
 </html>
