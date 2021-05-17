@@ -25,7 +25,7 @@
 
             if($result->num_rows() > 0){
                 foreach($result->result() as $row):
-                    $userData["user_id"] = $row->id;
+                    $userData["id"] = $row->id;
                     $userData["username"] = $row->username;
                 endforeach;
 
@@ -40,7 +40,7 @@
                 $response["Message"] = 'Invalid username/password! Please try again.';
             }
 
-            return json_encode($response);
+            return $response;
         }
     }
 ?>

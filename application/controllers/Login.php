@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends MY_Controller{
     function __construct(){
         parent::__construct();
+        $this->load->helper('url');
+        $this->load->library('session');
         $this->load->model('UserModel');
     }
 
@@ -12,7 +14,7 @@ class Login extends MY_Controller{
     }
 
     public function checkSession(){
-       $user_id = $this->session->userdata("user_id");
+       $user_id = $this->session->userdata("id");
         
         if(isset($user_id)){
             $this->page = "home/home";
@@ -30,7 +32,8 @@ class Login extends MY_Controller{
 
     public function signIn(){
         $data = $_POST["userCreds"];
+        $result = $this->UserModel->GetUserByCreds($data["username"], $data["password"]);
 
-        echo $this->session->userdata("user_id");//$this->UserModel->GetUserByCreds($data["username"], $data["password"]);
+        echo json_encode($result);
     }
 }
